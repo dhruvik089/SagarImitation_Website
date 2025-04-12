@@ -1,0 +1,51 @@
+<div class="home-page">
+  <!-- Hero Carousel -->
+  <section class="hero-carousel">
+    <div class="carousel-container">
+      <div class="carousel-slide" [class.active]="currentSlide === 0">
+        <img src="../../../assets/img/logo.jpg" alt="Jewelry Collection">
+        <div class="carousel-caption">
+          <h1>Exquisite Imitation Jewelry</h1>
+          <p>Discover our latest collection</p>
+          <a routerLink="/shop" class="btn">Shop Now</a>
+        </div>
+      </div>
+      <div class="carousel-slide" [class.active]="currentSlide === 1">
+        <img src="https://www.borsheims.com/blog/wp-content/uploads/2020/12/types-of-necklaces-1030x515.jpg" alt="Special Offers">
+        <div class="carousel-caption">
+          <h1>Summer Special</h1>
+          <p>Get 20% off on selected items</p>
+          <a routerLink="/offers" class="btn">View Offers</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Categories -->
+  <section class="featured-categories">
+    <h2>Shop By Category</h2>
+    <div class="category-grid">
+      <div class="category-card" *ngFor="let category of categories">
+        <img [src]="category.image" [alt]="category.name">
+        <h3>{{category.name}}</h3>
+        <a [routerLink]="['/category', category.id]" class="btn-outline">View Collection</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section class="best-sellers">
+    <h2>Our Best Sellers</h2>
+    <div class="product-grid">
+      <div class="product-card" *ngFor="let product of bestSellers">
+        <div class="product-image">
+          <img [src]="product.image" [alt]="product.name">
+          <div class="product-badge" *ngIf="product.badge">{{product.badge}}</div>
+        </div>
+        <div class="product-details">
+          <h3>{{product.name}}</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
