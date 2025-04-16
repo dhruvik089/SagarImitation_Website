@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  constructor(private route: Router) {}
   categories = [
     { id: 1, name: 'Necklaces', image: 'assets/img/images1.jpeg' },
     { id: 2, name: 'Earrings', image: 'assets/img/images2.jpeg' },
@@ -76,5 +78,8 @@ export class HomeComponent implements OnInit {
 
   ngOnDestroy() {
     clearInterval(this.carouselInterval);
+  }
+  getCategory(categoryName:any){    
+    this.route.navigate(['/product', categoryName]);
   }
 }

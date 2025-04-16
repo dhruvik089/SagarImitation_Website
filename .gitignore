@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+#  npx angular-cli-ghpages --dir=dist/sagar-imitation-website/browser
+#  ng build --base-href "https://dhruvik089.github.io/SagarImitation_Website/"
