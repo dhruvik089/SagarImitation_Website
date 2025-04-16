@@ -1,39 +1,106 @@
-/* Navbar container */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 1rem;
-  }
-  
-  /* Logo styling */
-  .navbar .logo img {
-    width: 5rem; /* Adjust the size of your logo */
-    height: 2rem;
-  }
-  
-  /* Navigation links container */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Logo styling */
+.navbar .logo img {
+  width: 15rem;
+  height: 2rem;
+}
+
+/* Navigation links container */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling individual links */
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #b8860b;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger active animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
   .nav-links {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 200px;
+    height: calc(100vh - 60px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    z-index: 1000;
   }
-  
-  /* Styling individual links */
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
   .nav-links li {
-    margin-left: 20px;
+    margin: 15px 0;
+    width: 100%;
   }
-  
+
   .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
   }
-  
-  .nav-links a:hover {
-    color: #ff6347; /* A nice hover color, you can adjust it */
+
+  .hamburger {
+    display: flex;
   }
-  
+}

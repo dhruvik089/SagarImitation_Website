@@ -3,18 +3,24 @@
   <section class="hero-carousel">
     <div class="carousel-container">
       <div class="carousel-slide" [class.active]="currentSlide === 0">
-        <img src="../../../assets/img/logo.jpg" alt="Jewelry Collection">
+        <img src="../../../assets/img/images2.jpeg" alt="Jewelry Collection" />
         <div class="carousel-caption">
           <h1>Exquisite Imitation Jewelry</h1>
           <p>Discover our latest collection</p>
-          <a routerLink="/shop" class="btn">Shop Now</a>
         </div>
       </div>
       <div class="carousel-slide" [class.active]="currentSlide === 1">
-        <img src="https://www.borsheims.com/blog/wp-content/uploads/2020/12/types-of-necklaces-1030x515.jpg" alt="Special Offers">
+        <img src="../../../assets/img/images1.jpeg" alt="Special Offers" />
         <div class="carousel-caption">
-          <h1>Summer Special</h1>
-          <p>Get 20% off on selected items</p>
+          <h1>Exquisite Imitation Jewelry</h1>
+          <p>Discover our latest collection</p>
+        </div>
+      </div>
+      <div class="carousel-slide" [class.active]="currentSlide === 2">
+        <img src="../../../assets/img/images3.jpeg" alt="Special Offers" />
+        <div class="carousel-caption">
+          <h1>Exquisite Imitation Jewelry</h1>
+          <p>Discover our latest collection</p>
         </div>
       </div>
     </div>
@@ -25,9 +31,10 @@
     <h2>Shop By Category</h2>
     <div class="category-grid">
       <div class="category-card" *ngFor="let category of categories">
-        <img [src]="category.image" [alt]="category.name">
-        <h3>{{category.name}}</h3>
-        <a [routerLink]="['/category', category.id]" class="btn-outline">View Collection</a>
+        <img [src]="category.image" [alt]="category.name" />
+        <h3>{{ category.name }}</h3>
+        <!-- <a [routerLink]="['/category', category.id]" class="btn-outline"
+          >View Collection</a> -->
       </div>
     </div>
   </section>
@@ -38,11 +45,13 @@
     <div class="product-grid">
       <div class="product-card" *ngFor="let product of bestSellers">
         <div class="product-image">
-          <img [src]="product.image" [alt]="product.name">
-          <div class="product-badge" *ngIf="product.badge">{{product.badge}}</div>
+          <img [src]="product.image" [alt]="product.name" />
+          <div class="product-badge" *ngIf="product.badge">
+            {{ product.badge }}
+          </div>
         </div>
         <div class="product-details">
-          <h3>{{product.name}}</h3>
+          <h3>{{ product.name }}</h3>
         </div>
       </div>
     </div>

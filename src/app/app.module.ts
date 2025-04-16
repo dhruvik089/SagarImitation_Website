@@ -7,6 +7,7 @@ import { HeaderComponent } from './componant/header/header.component';
 import { FooterComponent } from './componant/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { contactUsComponent } from './pages/contact-us/contact-us.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { contactUsComponent } from './pages/contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
