@@ -1,10 +1,10 @@
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-brand">
-      <div class="logo">Sagar Imitation</div>
+      <div class="logo">Sagar Ornament</div>
       <p class="tagline">Quality products since 2009</p>
     </div>
-    
+
     <div class="footer-links">
       <div class="links-column">
         <h3>Shop</h3>
@@ -14,7 +14,7 @@
           <li><a routerLink="/best-sellers">Best Sellers</a></li>
         </ul>
       </div>
-      
+
       <div class="links-column">
         <h3>Help</h3>
         <ul>
@@ -23,7 +23,7 @@
           <li><a routerLink="/shipping">Shipping Policy</a></li>
         </ul>
       </div>
-      
+
       <!-- <div class="links-column">
         <h3>Company</h3>
         <ul>
@@ -36,16 +36,35 @@
       <div class="links-column">
         <h3>Contact</h3>
         <ul class="contact-info">
-          <li><i class="fas fa-phone"></i> +91 98765 43210</li>
-          <li><i class="fas fa-envelope"></i> {{'contact@sagarimitation.com'}}</li>
-          <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, Mumbai, India</li>
+          <li>
+            <i class="fa fa-phone"></i>
+            <a href="tel:+919898498101">+91 98984 98101, +91 95861 58778</a>
+          </li>
+          <!-- <li><i class="fa fa-phone"></i> <a href="tel:+919586158778"></a></li> -->
+          <!-- <li><i class="fas fa-envelope"></i> {{'contact@sagarimitation.com'}}</li> -->
+          <!-- <li>
+    <i class="fa fa-map-marker-alt"></i> 123 Main Street, Mumbai, India
+  </li> -->
+          <google-map
+            height="10rem"
+            width="100%"
+            [center]="{ lat: latitude, lng: langitude }"
+            [zoom]="15"
+            mapId="SAGAR_MAP"
+          >
+            <map-advanced-marker
+              [position]="{ lat: latitude, lng: langitude }"
+              (mapClick)="redirectToGoogleMaps()"
+              title="Sagar Imitation Location"
+            ></map-advanced-marker>
+          </google-map>
         </ul>
       </div>
     </div>
   </div>
-  
+
   <div class="footer-bottom">
-    <p>&copy; 2025 Sagar Imitation. All rights reserved.</p>
+    <p>&copy; 2025 Sagar Ornament. All rights reserved.</p>
     <div class="legal-links">
       <a routerLink="/privacy">Privacy Policy</a>
       <a routerLink="/terms">Terms of Service</a>

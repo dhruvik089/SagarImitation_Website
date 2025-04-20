@@ -60,7 +60,7 @@
   bottom: 0;
   width: 40px;
   height: 2px;
-  background-color: #e74c3c;
+  background-color: #b8860b;
 }
 
 .links-column ul {
@@ -81,7 +81,7 @@
 }
 
 .links-column a:hover {
-  color: #e74c3c;
+  color: #b8860b;
   padding-left: 5px;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .legal-links a:hover {
-  color: #e74c3c;
+  color: #b8860b;
 }
 
 /* Responsive adjustments */
@@ -129,6 +129,58 @@
   }
   
   .links-column {
-    // min-width: 100%;
+    min-width: 100%;
   }
 }
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  }
+  
+  .contact-info li i.fa-phone {
+  color: #b8860b;
+  font-size: 18px;
+  min-width: 20px;
+  }
+  
+  .contact-info li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  }
+  
+  .contact-info li a:hover {
+  color: #b8860b;
+  text-decoration: underline;
+  }
+
+  .contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  }
+  
+  .contact-info li i.fa-phone {
+  color: #b8860b;
+  font-size: 18px;
+  min-width: 20px;
+  }
+  
+  .contact-info li a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  }
+  
+  .contact-info li a:hover {
+  color: #b8860b;
+  text-decoration: underline;
+  }
+  
+  

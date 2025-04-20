@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor(private route: Router) {}
+
   categories = [
     { id: 1, name: 'Necklaces', image: 'assets/img/images1.jpeg' },
     { id: 2, name: 'Earrings', image: 'assets/img/images2.jpeg' },
@@ -48,6 +48,11 @@ export class HomeComponent implements OnInit {
   currentSlide = 0;
   carouselInterval: any;
 
+  latitude = 22.301267;
+  langitude = 70.816389;
+
+  constructor(private route: Router) { }
+
   ngOnInit() {
     this.startCarousel();
   }
@@ -79,7 +84,11 @@ export class HomeComponent implements OnInit {
   ngOnDestroy() {
     clearInterval(this.carouselInterval);
   }
-  getCategory(categoryName:any){    
+  getCategory(categoryName: any) {
     this.route.navigate(['/product', categoryName]);
+  }
+  redirectToGoogleMaps() {
+    const url = `https://www.google.com/maps?q=${this.latitude},${this.langitude}`;
+    window.open(url, '_blank'); // opens in new tab
   }
 }

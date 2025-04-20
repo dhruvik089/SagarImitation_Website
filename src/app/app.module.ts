@@ -10,7 +10,7 @@ import { contactUsComponent } from './pages/contact-us/contact-us.component';
 import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductDetailsByCategoryComponent } from './pages/product-details-by-category/product-details-by-category.component';
-
+import { GoogleMapsModule } from "@angular/google-maps";
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +24,8 @@ import { ProductDetailsByCategoryComponent } from './pages/product-details-by-ca
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

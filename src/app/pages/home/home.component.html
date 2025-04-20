@@ -30,7 +30,11 @@
   <section class="featured-categories">
     <h2>Category</h2>
     <div class="category-grid">
-      <div class="category-card" *ngFor="let category of categories" (click)="getCategory(category.name)">
+      <div
+        class="category-card"
+        *ngFor="let category of categories"
+        (click)="getCategory(category.name)"
+      >
         <img [src]="category.image" [alt]="category.name" />
         <h3>{{ category.name }}</h3>
         <!-- <a [routerLink]="['/category', category.id]" class="btn-outline"

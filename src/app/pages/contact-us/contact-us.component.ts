@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './contact-us.component.scss'
 })
 export class contactUsComponent {
-onSubmit(data:any){}
+  latitude = 22.301267;
+  langitude = 70.816389;
+
+  onSubmit(data: any) { }
+
+  redirectToGoogleMaps() {
+    const url = `https://www.google.com/maps?q=${this.latitude},${this.langitude}`;
+    window.open(url, '_blank'); // opens in new tab
+  }
 }
