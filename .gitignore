@@ -40,3 +40,10 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# For live on git :-
+# npx angular-cli-ghpages --dir=dist/sagar-imitation-website/browser
+# For local build :-
+# ng build --base-href "https://dhruvik089.github.io/SagarImitation_Website/"
+
+# AIzaSyAuMYTo4hOcxccJyGnFGAlabqbryb2eKno

@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { AboutComponent } from './pages/about/about.component';
 import { ProductDetailsByCategoryComponent } from './pages/product-details-by-category/product-details-by-category.component';
 import { GoogleMapsModule } from "@angular/google-maps";
+import { provideToastr, ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +27,11 @@ import { GoogleMapsModule } from "@angular/google-maps";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(), 
   ],
-  providers: [],
+  providers: [provideToastr()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
