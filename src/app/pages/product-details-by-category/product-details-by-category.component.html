@@ -5,8 +5,6 @@
         <div *ngFor="let product of getProductsByCategories()" class="product-card">
           <img [src]="product.image" alt="{{ product.name }}">
           <h3>{{ product.name }}</h3>
-          <p>Price: ${{ product.price }}</p>
-          <!-- <span *ngIf="product.badge" class="badge">{{ product.badge }}</span> -->
         </div>
       </div>
     </div>
