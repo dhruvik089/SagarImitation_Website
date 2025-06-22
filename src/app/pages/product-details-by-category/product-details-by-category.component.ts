@@ -12,11 +12,11 @@ export class ProductDetailsByCategoryComponent implements OnInit {
     // Necklaces
     {
       id: 1,
-      name: 'Golden Heart Necklace',
+      name: 'Lariat Necklace',
       categoryId: 1,
       categoryName: 'Necklaces',
       price: 49.99,
-      image: 'https://www.orra.co.in/media/catalog/product/cache/8706a87b250cd4797f5bf599698c5c7a/o/s/osn19041_2_gpkemjdffhlflbgm.jpg',
+      image: './assets/img/products/LariatNecklace.png',
       description: 'Elegant golden heart-shaped necklace for special occasions.'
     },
     {
@@ -25,13 +25,40 @@ export class ProductDetailsByCategoryComponent implements OnInit {
       categoryId: 1,
       categoryName: 'Necklaces',
       price: 59.99,
-      image: 'https://www.orra.co.in/media/catalog/product/cache/8706a87b250cd4797f5bf599698c5c7a/o/s/osn19041_2_gpkemjdffhlflbgm.jpg',
+      image: './assets/img/products/PearlDropNecklace.jpg',
+      description: 'Classic pearl drop necklace, perfect for weddings and formal events.'
+    },
+    {
+      id: 3,
+      name: 'Princess Necklace',
+      categoryId: 1,
+      categoryName: 'Necklaces',
+      price: 59.99,
+      image: './assets/img/products/PrincessNecklace.png',
+      description: 'Classic pearl drop necklace, perfect for weddings and formal events.'
+    },
+    {
+      id: 4,
+      name: 'Teardrop Elegance Diamond Necklace',
+      categoryId: 1,
+      categoryName: 'Necklaces',
+      price: 59.99,
+      image: './assets/img/products/TeardropEleganceDiamondNecklace.png',
+      description: 'Classic pearl drop necklace, perfect for weddings and formal events.'
+    },
+    {
+      id: 5,
+      name: 'Choker Necklace',
+      categoryId: 1,
+      categoryName: 'Necklaces',
+      price: 59.99,
+      image: './assets/img/products/ChokerNecklace.png',
       description: 'Classic pearl drop necklace, perfect for weddings and formal events.'
     },
 
     // Earrings
     {
-      id: 3,
+      id: 6,
       name: 'Diamond Stud Earrings',
       categoryId: 2,
       categoryName: 'Earrings',
@@ -40,7 +67,7 @@ export class ProductDetailsByCategoryComponent implements OnInit {
       description: 'Sparkling diamond studs that go with everything.'
     },
     {
-      id: 4,
+      id: 7,
       name: 'Hoop Earrings',
       categoryId: 2,
       categoryName: 'Earrings',
@@ -51,7 +78,7 @@ export class ProductDetailsByCategoryComponent implements OnInit {
 
     // Bracelets
     {
-      id: 5,
+      id: 8,
       name: 'Charm Bracelet',
       categoryId: 3,
       price: 39.99,
@@ -59,7 +86,7 @@ export class ProductDetailsByCategoryComponent implements OnInit {
       description: 'Cute charm bracelet with customizable charms.'
     },
     {
-      id: 6,
+      id: 9,
       name: 'Cuff Bracelet',
       categoryId: 3,
       price: 44.99,

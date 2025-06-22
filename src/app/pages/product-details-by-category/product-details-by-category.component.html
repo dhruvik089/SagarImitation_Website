@@ -1,11 +1,14 @@
 <div class="product-category-container">
   <h1>{{ categoryName }}</h1>
   <div class="categories">
-      <div class="products">
-        <div *ngFor="let product of getProductsByCategories()" class="product-card">
-          <img [src]="product.image" alt="{{ product.name }}">
-          <h3>{{ product.name }}</h3>
-        </div>
+    <div class="products">
+      <div
+        *ngFor="let product of getProductsByCategories()"
+        class="product-card"
+      >
+        <img [src]="product.image" alt="{{ product.name }}" />
+        <h3>{{ product.name }}</h3>
       </div>
     </div>
   </div>
+</div>
