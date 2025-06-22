@@ -1,9 +1,11 @@
 .about-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 40px 20px;
   color: #333;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 // Hero Section
@@ -14,27 +16,34 @@
   padding: 60px 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
   
   h1 {
     font-size: 3em;
     margin-bottom: 15px;
     color: #2c3e50;
+    word-wrap: break-word;
   }
   
   .tagline {
     font-size: 1.5em;
     color: #b8860b;
     font-weight: 300;
+    word-wrap: break-word;
   }
 }
 
 // Content Section with Cards
 .content-section {
+  text-align: justify;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 60px;
   gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-card {
@@ -45,6 +54,7 @@
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
   
   &:hover {
     transform: translateY(-5px);
@@ -71,12 +81,14 @@
     font-size: 1.8em;
     margin-bottom: 15px;
     color: #2c3e50;
+    word-wrap: break-word;
   }
   
   p {
     font-size: 1.1em;
     line-height: 1.6;
     color: #555;
+    word-wrap: break-word;
   }
 }
 
@@ -84,11 +96,14 @@
 .values-section {
   margin-bottom: 60px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
   
   h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
     color: #2c3e50;
+    word-wrap: break-word;
   }
 }
 
@@ -96,6 +111,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
+  width: 100%;
+  max-width: 1200px; /* optional: constrains width */
+  margin: 0 auto; /* centers horizontally */
+  box-sizing: border-box;
+  text-align: justify;
 }
 
 .value-item {
@@ -104,6 +124,7 @@
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
+  box-sizing: border-box;
   
   &:hover {
     transform: translateY(-5px);
@@ -139,12 +160,14 @@
     font-size: 1.4em;
     margin-bottom: 15px;
     color: #2c3e50;
+    word-wrap: break-word;
   }
   
   p {
     font-size: 1em;
     line-height: 1.6;
     color: #555;
+    word-wrap: break-word;
   }
 }
 
@@ -152,11 +175,14 @@
 .testimonials-section {
   margin-bottom: 60px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
   
   h2 {
     font-size: 2.5em;
     margin-bottom: 40px;
     color: #2c3e50;
+    word-wrap: break-word;
   }
 }
 
@@ -165,6 +191,8 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .testimonial {
@@ -176,6 +204,7 @@
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   position: relative;
+  box-sizing: border-box;
   
   .quote-icon {
     font-size: 24px;
@@ -189,11 +218,13 @@
     color: #555;
     font-style: italic;
     margin-bottom: 20px;
+    word-wrap: break-word;
   }
   
   .customer-name {
     font-weight: 600;
     color: #2c3e50;
+    word-wrap: break-word;
   }
 }
 
@@ -203,11 +234,14 @@
   background-color: #f9f9f9;
   padding: 60px 30px;
   border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
   
   h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #2c3e50;
+    word-wrap: break-word;
   }
   
   p {
@@ -217,6 +251,7 @@
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    word-wrap: break-word;
   }
   
   .cta-button {
@@ -257,11 +292,60 @@
   
   .about-card {
     margin-bottom: 20px;
+    min-width: 100%;
+    width: 100%;
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial {
+    min-width: 100%;
   }
   
   .values-section h2,
   .testimonials-section h2,
   .cta-section h2 {
     font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2em;
+  }
+  
+  .hero-section .tagline {
+    font-size: 1em;
+  }
+  
+  .about-card {
+    padding: 20px;
+  }
+  
+  .value-item {
+    padding: 20px;
+  }
+  
+  .testimonial {
+    padding: 20px;
+  }
+  
+  .cta-section {
+    padding: 40px 20px;
+  }
+  
+  .cta-section h2 {
+    font-size: 1.8em;
+  }
+  
+  .cta-section p {
+    font-size: 1em;
+  }
+  
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1em;
   }
 }

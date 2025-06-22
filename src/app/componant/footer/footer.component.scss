@@ -99,6 +99,23 @@
   margin: 0;
 }
 
+.developer-credit {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.developer-credit a {
+  color: #7f8c8d;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.developer-credit a:hover {
+  color: #b8860b;
+}
+
 .legal-links {
   display: flex;
   justify-content: center;
