@@ -63,7 +63,7 @@ export class ProductDetailsByCategoryComponent implements OnInit {
       categoryId: 2,
       categoryName: 'Earrings',
       price: 89.99,
-      image: 'https://www.tarinika.in/cdn/shop/products/IMGL4927.jpg?v=1637838783&width=1780',
+      image: './assets/img/products/studEarRing.jpg',
       description: 'Sparkling diamond studs that go with everything.'
     },
     {
@@ -72,31 +72,87 @@ export class ProductDetailsByCategoryComponent implements OnInit {
       categoryId: 2,
       categoryName: 'Earrings',
       price: 29.99,
-      image: 'https://www.tarinika.in/cdn/shop/products/IMGL4927.jpg?v=1637838783&width=1780',
+      image: './assets/img/products/hoopsEarRing.jpg',
+      description: 'Trendy gold hoop earrings for everyday wear.'
+    },
+    {
+      id: 8,
+      name: 'Huggies Earrings',
+      categoryId: 2,
+      categoryName: 'Earrings',
+      price: 29.99,
+      image: './assets/img/products/huggiesEarRing.jpg',
+      description: 'Trendy gold hoop earrings for everyday wear.'
+    },
+    {
+      id: 9,
+      name: 'Drop Earrings',
+      categoryId: 2,
+      categoryName: 'Earrings',
+      price: 29.99,
+      image: './assets/img/products/dropsEarring.jpg',
+      description: 'Trendy gold hoop earrings for everyday wear.'
+    },
+    {
+      id: 10,
+      name: 'Dangle Earrings',
+      categoryId: 2,
+      categoryName: 'Earrings',
+      price: 29.99,
+      image: './assets/img/products/danglesEarRing.jpg',
       description: 'Trendy gold hoop earrings for everyday wear.'
     },
 
     // Bracelets
     {
-      id: 8,
+      id: 11,
       name: 'Charm Bracelet',
       categoryId: 3,
+      categoryName: 'Bracelets',
       price: 39.99,
-      image: 'assets/img/products/bracelet1.jpeg',
+      image: './assets/img/products/charmBracelets.jpg',
       description: 'Cute charm bracelet with customizable charms.'
     },
     {
-      id: 9,
+      id: 12,
       name: 'Cuff Bracelet',
       categoryId: 3,
+      categoryName: 'Bracelets',
       price: 44.99,
-      image: 'assets/img/products/bracelet2.jpeg',
+      image: 'assets/img/products/cuffBracelets.jpg',
+      description: 'Bold and stylish cuff bracelet for a statement look.'
+    },
+    {
+      id: 13,
+      name: 'Beaded Bracelet',
+      categoryId: 3,
+      categoryName: 'Bracelets',
+      price: 44.99,
+      image: 'assets/img/products/beadedBracelets.jpg',
+      description: 'Bold and stylish cuff bracelet for a statement look.'
+    },
+    {
+      id: 14,
+      name: 'Tennis Bracelets',
+      categoryId: 3,
+      categoryName: 'Bracelets',
+      price: 44.99,
+      image: 'assets/img/products/tennisBracelets.jpg',
+      description: 'Bold and stylish cuff bracelet for a statement look.'
+    },
+    {
+      id: 15,
+      name: 'Bangle Bracelet',
+      categoryId: 3,
+      categoryName: 'Bracelets',
+      price: 44.99,
+      image: 'assets/img/products/bangleBracelets.jpg',
       description: 'Bold and stylish cuff bracelet for a statement look.'
     },
 
     // Rings
     {
-      id: 7,
+      id: 16,
       name: 'Engagement Ring',
       categoryId: 4,
       price: 199.99,
@@ -104,7 +160,7 @@ export class ProductDetailsByCategoryComponent implements OnInit {
       description: 'Beautifully crafted engagement ring with a classic diamond.'
     },
     {
-      id: 8,
+      id: 17,
       name: 'Stackable Rings Set',
       categoryId: 4,
       price: 54.99,

@@ -49,7 +49,10 @@ export class contactUsComponent {
         this.toastr.error('Message failed to send.');
       }
     );
-
   }
 
+  redirectToGoogleMaps() {
+    const url = `https://www.google.com/maps?q=${this.latitude},${this.langitude}`;
+    window.open(url, '_blank'); // opens in new tab
+  }
 }
