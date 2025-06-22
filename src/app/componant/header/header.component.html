@@ -12,9 +12,9 @@
   </div>
 
   <ul class="nav-links" [class.open]="menuOpen">
-    <li><a routerLink="/home" (click)="menuOpen = false">Home</a></li>
-    <!-- <li><a routerLink="/about" (click)="menuOpen = false">About us</a></li> -->
-    <li><a routerLink="/contact" (click)="menuOpen = false">Contact Us</a></li>
+    <li><a routerLink="/home" routerLinkActive="active" (click)="menuOpen = false">Home</a></li>
+    <li><a routerLink="/contact" routerLinkActive="active" (click)="menuOpen = false">Contact Us</a></li>
+    <!-- <li><a routerLink="/about" routerLinkActive="active" (click)="menuOpen = false">About</a></li> -->
   </ul>
 </nav>
   
