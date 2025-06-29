@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -169,12 +170,33 @@ export class ProductDetailsByCategoryComponent implements OnInit {
     }
   ];
   categoryName: string = '';
-  constructor(private activeRoute: ActivatedRoute) { }
+  constructor(private activeRoute: ActivatedRoute,
+    private titleService: Title,
+    private metaService: Meta
+  ) { }
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe(params => {
       this.categoryName = params['categoryName'];
       this.products = this.getProductsByCategories();
+      // Set SEO tags
+      const pageTitle = `${this.categoryName} Collection – Sagar Ornament`;
+      const pageDescription = `Browse our exclusive ${this.categoryName.toLowerCase()} collection, crafted with elegance. Shop handcrafted jewelry at Sagar Ornament.`;
+
+      this.titleService.setTitle(pageTitle);
+      this.metaService.updateTag({ name: 'description', content: pageDescription });
+      this.metaService.updateTag({ name: 'keywords', content: `${this.categoryName.toLowerCase()}, Sagar Ornament, handcrafted jewelry, buy ${this.categoryName.toLowerCase()} online` });
+
+      this.metaService.updateTag({ property: 'og:title', content: pageTitle });
+      this.metaService.updateTag({ property: 'og:description', content: pageDescription });
+      this.metaService.updateTag({ property: 'og:url', content: `https://sagarornament.com/category/${this.categoryName}` });
+      this.metaService.updateTag({ property: 'og:type', content: 'website' });
+
+      // Optional: Set a category-specific image
+      const firstProductImage = this.products[0]?.image.replace('./', 'https://sagarornament.com/');
+      if (firstProductImage) {
+        this.metaService.updateTag({ property: 'og:image', content: firstProductImage });
+      }
     });
   }
   getProductsByCategories() {
